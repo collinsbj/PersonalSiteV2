@@ -1,6 +1,7 @@
 import React, { Component } from "react"
-import Stars from "./components/stars.js"
-import Quotes from "./components/quotes.js"
+// import Stars from "./components/stars.js"
+import vueLogo from "./assets/vue-logo.png"
+// import Quotes from "./components/quotes.js"
 import "./App.css"
 
 class App extends Component {
@@ -15,16 +16,22 @@ class App extends Component {
 	// 	}, 13000)
 	// }
 
-	handleMouseMove(e) {
-		this.setState({
-			offsetX: e.nativeEvent.offsetX,
-			offsetY: e.nativeEvent.offsetY
+	// handleMouseMove(e) {
+	// 	this.setState({
+	// 		offsetX: e.nativeEvent.offsetX,
+	// 		offsetY: e.nativeEvent.offsetY
+	// 	})
+	// }
+
+	handleArrowClick() {
+		document.querySelector("#page2").scrollIntoView({
+			behavior: "smooth"
 		})
 	}
 
 	render() {
 		return (
-			<div className="App" onMouseMove={this.handleMouseMove.bind(this)}>
+			<div className="App">
 				{/* <div className="page">
 					<div className="header-parent">
 						<div className="first-name-wrapper">
@@ -58,7 +65,7 @@ class App extends Component {
 						Embark
 					</div>
 				</div> */}
-				<div className="page">
+				{/* <div className="page">
 					<div id="first-name-wrapper">
 						<div id="first-name-inner">
 							BJ
@@ -82,7 +89,8 @@ class App extends Component {
 							Other cool sounding titles
 						</div>
 					</div>
-					<div className="selector-text" id="selector-text-1">
+					<div
+						className="selector-text" id="selector-text-1">
 						Projects
 					</div>
 					<div className="selector-text" id="selector-text-2">
@@ -98,8 +106,17 @@ class App extends Component {
 						Education
 					</div>
 					<div id="selector-wrapper">
-						<div className="selector" id="selector-1">
-
+						<div onMouseOver={() => {
+							var el = document.querySelector("#selector-1")
+							el.classList.add("move-right")
+						}
+						}
+						onMouseLeave={() => {
+							var el = document.querySelector("#selector-1")
+							el.classList.remove("move-right")
+						}
+						}
+						className="selector" id="selector-1">
 						</div>
 						<div className="selector" id="selector-2">Section</div>
 						<div className="selector" id="selector-3">Section</div>
@@ -109,7 +126,100 @@ class App extends Component {
 				</div>
 				<div className="page" id="stars">
 					<Stars offsetX={this.state.offsetX} offsetY={this.state.offsetY}></Stars>
-					<Quotes></Quotes>
+				</div> */}
+				<div className="page">
+					<div className="absolute-center">
+						<div id="name">BJ Collins</div>
+						<div id="title-wrapper">
+							<div id="list-wrapper">
+								<div className="title" id="title-1">
+									Software Engineer
+								</div>
+								<div className="title" id="title-2">
+									Web Developer
+								</div>
+								<div className="title" id="title-3">
+									Other Cool Sounding Titles!
+								</div>
+							</div>
+						</div>
+					</div>
+					<i
+						onClick={this.handleArrowClick.bind(this)}
+						class="material-icons"
+						id="page-arrow"
+					>
+						expand_more
+					</i>
+				</div>
+				<div className="page" id="page2-buffer" />
+				<div className="page" id="page2">
+					<div id="tech-title-wrapper">
+						<div id="tech-background" />
+						<div id="tech-title">TECH</div>
+					</div>
+					<div className="absolute-center" id="tech-wrapper">
+						<div className="box" id="box-1">
+							Vue.js
+							<div className="tech-cover" />
+						</div>
+						<div className="box" id="box-2">
+							Vuex
+							<div className="tech-cover" />
+						</div>
+						<div className="box" id="box-3">
+							Vue <br /> Router
+							<div className="tech-cover" />
+						</div>
+						<div className="box" id="box-4">
+							Vuetify
+							<div className="tech-cover" />
+						</div>
+						<div className="box" id="box-5">
+							Git
+							<div className="tech-cover" />
+						</div>
+						<div className="box" id="box-6">
+							Github
+							<div className="tech-cover" />
+						</div>
+						<div className="box" id="box-7">
+							Node.js
+							<div className="tech-cover" />
+						</div>
+						<div className="box" id="box-8">
+							React
+							<div className="tech-cover" />
+						</div>
+						<div className="box" id="box-9">
+							Postgres
+							<div className="tech-cover" />
+						</div>
+						<div className="box" id="box-10">
+							Loopback
+							<div className="tech-cover" />
+						</div>
+						<div className="box" id="box-11">
+							Knex.js
+							<div className="tech-cover" />
+						</div>
+						<div className="box" id="box-12">
+							Bitbucket
+							<div className="tech-cover" />
+						</div>
+						<div className="box" id="box-13">
+							Sharepoint
+							<div className="tech-cover" />
+						</div>
+						<div className="box" id="box-14">
+							JIRA
+							<div className="tech-cover" />
+						</div>
+						<div className="box" id="box-15">
+							Slack
+							<div className="tech-cover" />
+						</div>
+					</div>
 				</div>
 			</div>
 		)
