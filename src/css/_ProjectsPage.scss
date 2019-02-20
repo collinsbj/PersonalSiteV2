@@ -1,0 +1,157 @@
+$blue: #448aff;
+$red: #ff5252;
+$green: #69f0ae;
+$purple: #e040fb;
+$orange: #ffab40;
+
+#projects-page {
+	background-color: rgb(238, 237, 237);
+}
+
+#projects-page-title {
+	font-family: "Nanum-Gothic", sans-serif;
+	font-size: 40px;
+	border-bottom: 10px solid $blue;
+	width: fit-content;
+}
+
+#projects-wrapper {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100vw;
+}
+
+.project-card {
+	background-color: white;
+	height: 200px;
+	width: calc(50vw - 60px);
+	margin: 30px;
+	position: relative;
+	overflow: hidden;
+	clip-path: polygon(calc(100% - 25px) 0%, 100% 25px, 100% 100%, 0 100%, 0 0);
+}
+
+.project-name {
+	font-size: 26px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: fit-content;
+}
+
+.project-card input {
+	opacity: 0;
+}
+
+.project-card input,
+.toggle {
+	margin: 0;
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	top: 5px;
+	right: 5px;
+	outline: none;
+	z-index: 10;
+}
+
+.toggle {
+	font-family: "Rubik";
+	transition: 0.4s;
+	pointer-events: none;
+	font-size: 30px;
+	line-height: 35px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#projects-wrapper .project-card:nth-child(5n - 4) .toggle {
+	color: $blue;
+	box-shadow: 0 0 0 0px $blue;
+}
+
+#projects-wrapper .project-card:nth-child(5n - 3) .toggle {
+	color: $red;
+	box-shadow: 0 0 0 0px $red;
+}
+
+#projects-wrapper .project-card:nth-child(5n - 2) .toggle {
+	color: $green;
+	box-shadow: 0 0 0 0px $green;
+}
+
+#projects-wrapper .project-card:nth-child(5n - 1) .toggle {
+	color: $purple;
+	box-shadow: 0 0 0 0px $purple;
+}
+
+#projects-wrapper .project-card:nth-child(5n) .toggle {
+	color: $orange;
+	box-shadow: 0 0 0 0px $orange;
+}
+
+.project-description {
+	opacity: 0;
+	z-index: 11;
+	margin: 10px;
+	font-size: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: calc(50vw - 105px);
+}
+
+.project-description-bullet {
+	margin: 10px 0;
+	color: white;
+}
+
+.project-description-bullet-divider {
+	width: 100%;
+	height: 1px;
+	background-color: white;
+}
+
+.project-card input:checked ~ .toggle {
+	transition: 0.4s;
+	transform: rotate(225deg);
+}
+
+#projects-wrapper .project-card:nth-child(5n - 4) input:checked ~ .toggle {
+	box-shadow: 0 0 0 1000px $blue;
+	background-color: $blue;
+	color: white;
+}
+
+#projects-wrapper .project-card:nth-child(5n - 3) input:checked ~ .toggle {
+	box-shadow: 0 0 0 1000px $red;
+	background-color: $red;
+	color: white;
+}
+
+#projects-wrapper .project-card:nth-child(5n - 2) input:checked ~ .toggle {
+	box-shadow: 0 0 0 1000px $green;
+	background-color: $green;
+	color: white;
+}
+
+#projects-wrapper .project-card:nth-child(5n - 1) input:checked ~ .toggle {
+	box-shadow: 0 0 0 1000px $purple;
+	background-color: $purple;
+	color: white;
+}
+
+#projects-wrapper .project-card:nth-child(5n) input:checked ~ .toggle {
+	box-shadow: 0 0 0 1000px $orange;
+	background-color: $orange;
+	color: white;
+}
+
+.project-card input:checked ~ .project-description {
+	opacity: 1;
+	transition: 0.4s;
+	transition-delay: 0.2s;
+}

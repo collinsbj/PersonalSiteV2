@@ -1,0 +1,201 @@
+$blue: #00b3ff;
+$red: #ff1177;
+$orange: #ff9900;
+$yellow: #ffdd1b;
+$green: #b6ff00;
+$purple: #ff00de;
+
+#tech-page {
+	background-color: rgb(10, 10, 10);
+}
+
+#tech-title {
+	font-size: 40px;
+	filter: blur(0.9px);
+	font-family: "Bad Script", cursive;
+	cursor: default;
+	color: #fff;
+	text-shadow: 0 0 10px $blue, 0 0 20px $blue, 0 0 40px $blue, 0 0 80px $blue,
+		0 0 120px $blue, 0 0 200px $blue, 0 0 300px $blue, 0 0 400px $blue;
+	transform: rotate(-45deg);
+	text-align: center;
+	position: absolute;
+	top: 10px;
+	left: 30px;
+}
+
+#tech-title span {
+	text-shadow: 0 0 10px $red, 0 0 20px $red, 0 0 40px $red, 0 0 80px $red,
+		0 0 120px $red, 0 0 200px $red, 0 0 300px $red, 0 0 400px $red;
+	animation: flicker 3s infinite both;
+}
+
+@keyframes flicker {
+	2%,
+	6%,
+	10% {
+		color: black;
+		text-shadow: none;
+	}
+
+	4%,
+	8%,
+	12% {
+		text-shadow: 0 0 10px $red, 0 0 20px $red, 0 0 40px $red, 0 0 80px $red,
+			0 0 120px $red, 0 0 200px $red, 0 0 300px $red, 0 0 400px $red;
+		color: white;
+	}
+}
+
+#its-dark {
+	top: 10px;
+	right: 10px;
+	position: absolute;
+	font-size: 25px;
+	font-family: "Bad Script", cursive;
+	filter: blur(0.6px);
+	cursor: pointer;
+	color: #fff;
+	text-shadow: 0 0 10px $blue, 0 0 20px $blue, 0 0 40px $blue, 0 0 80px $blue,
+		0 0 120px $blue, 0 0 200px $blue, 0 0 300px $blue, 0 0 400px $blue;
+}
+
+#its-dark span {
+	font-size: 40px;
+	color: black;
+	text-shadow: none;
+	animation: point 3s infinite;
+}
+
+#its-dark span:nth-child(1) {
+	margin-left: 5px;
+	animation-delay: 2s;
+}
+
+#its-dark span:nth-child(2) {
+	animation-delay: 1s;
+}
+
+@keyframes point {
+	0%,
+	33% {
+		color: #fff;
+		text-shadow: 0 0 10px $red, 0 0 20px $red, 0 0 40px $red, 0 0 80px $red,
+			0 0 120px $red, 0 0 200px $red, 0 0 300px $red, 0 0 400px $red;
+	}
+	34%,
+	100% {
+		color: black;
+		text-shadow: none;
+	}
+}
+
+#tech-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 85vw;
+	height: 85vh;
+}
+
+.glowing-text {
+	font-size: 40px;
+	color: black;
+	transition: 0.4s;
+	filter: blur(0.9px);
+	font-family: "Bad Script", cursive;
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	cursor: default;
+}
+
+.half-line-height {
+	line-height: 50px;
+}
+
+.glowing-text:hover {
+	transition: 0.4s;
+	color: #fff;
+}
+
+.light-up .glowing-text {
+	color: white;
+	transition: 0.4s;
+}
+
+#tech-wrapper .glowing-text:hover:nth-child(6n) {
+	text-shadow: 0 0 10px $red, 0 0 20px $red, 0 0 40px $red, 0 0 80px $red,
+		0 0 120px $red, 0 0 200px $red, 0 0 300px $red, 0 0 400px $red;
+}
+
+#tech-wrapper .glowing-text:hover:nth-child(6n - 1) {
+	text-shadow: 0 0 10px $orange, 0 0 20px $orange, 0 0 40px $orange,
+		0 0 80px $orange, 0 0 120px $orange, 0 0 200px $orange,
+		0 0 300px $orange, 0 0 400px $orange;
+}
+
+#tech-wrapper .glowing-text:hover:nth-child(6n - 2) {
+	text-shadow: 0 0 10px $yellow, 0 0 20px $yellow, 0 0 40px $yellow,
+		0 0 80px $yellow, 0 0 120px $yellow, 0 0 200px $yellow,
+		0 0 300px $yellow, 0 0 400px $yellow;
+}
+
+#tech-wrapper .glowing-text:hover:nth-child(6n - 3) {
+	text-shadow: 0 0 10px $green, 0 0 20px $green, 0 0 40px $green,
+		0 0 80px $green, 0 0 120px $green, 0 0 200px $green, 0 0 300px $green,
+		0 0 400px $green;
+}
+
+#tech-wrapper .glowing-text:hover:nth-child(6n - 4) {
+	text-shadow: 0 0 10px $blue, 0 0 20px $blue, 0 0 40px $blue, 0 0 80px $blue,
+		0 0 120px $blue, 0 0 200px $blue, 0 0 300px $blue, 0 0 400px $blue;
+}
+
+#tech-wrapper .glowing-text:hover:nth-child(6n - 5) {
+	text-shadow: 0 0 10px $purple, 0 0 20px $purple, 0 0 40px $purple,
+		0 0 80px $purple, 0 0 120px $purple, 0 0 200px $purple,
+		0 0 300px $purple, 0 0 400px $purple;
+}
+
+.light-up .glowing-text:nth-child(6n) {
+	text-shadow: 0 0 10px $red, 0 0 20px $red, 0 0 40px $red, 0 0 80px $red,
+		0 0 120px $red, 0 0 200px $red, 0 0 300px $red, 0 0 400px $red;
+	transition: random(200) / 100;
+}
+
+.light-up .glowing-text:nth-child(6n - 1) {
+	text-shadow: 0 0 10px $orange, 0 0 20px $orange, 0 0 40px $orange,
+		0 0 80px $orange, 0 0 120px $orange, 0 0 200px $orange,
+		0 0 300px $orange, 0 0 400px $orange;
+	transition: random(200) / 100;
+}
+
+.light-up .glowing-text:nth-child(6n - 2) {
+	text-shadow: 0 0 10px $yellow, 0 0 20px $yellow, 0 0 40px $yellow,
+		0 0 80px $yellow, 0 0 120px $yellow, 0 0 200px $yellow,
+		0 0 300px $yellow, 0 0 400px $yellow;
+	transition: random(200) / 100;
+}
+
+.light-up .glowing-text:nth-child(6n - 3) {
+	text-shadow: 0 0 10px $green, 0 0 20px $green, 0 0 40px $green,
+		0 0 80px $green, 0 0 120px $green, 0 0 200px $green, 0 0 300px $green,
+		0 0 400px $green;
+	transition: random(200) / 100;
+}
+
+.light-up .glowing-text:nth-child(6n - 4) {
+	text-shadow: 0 0 10px $blue, 0 0 20px $blue, 0 0 40px $blue, 0 0 80px $blue,
+		0 0 120px $blue, 0 0 200px $blue, 0 0 300px $blue, 0 0 400px $blue;
+	transition: random(200) / 100;
+}
+
+.light-up .glowing-text:nth-child(6n - 5) {
+	text-shadow: 0 0 10px $purple, 0 0 20px $purple, 0 0 40px $purple,
+		0 0 80px $purple, 0 0 120px $purple, 0 0 200px $purple,
+		0 0 300px $purple, 0 0 400px $purple;
+	transition: random(200) / 100;
+}

@@ -1,0 +1,106 @@
+#name {
+	font-family: "Nanum Gothic", sans-serif;
+	font-size: 50px;
+}
+
+#title-wrapper {
+	font-family: "Rubik", sans-serif;
+	font-size: 35px;
+	height: 50px;
+	overflow: hidden;
+}
+
+#list-wrapper {
+	animation-name: line-change;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+}
+
+.title {
+	height: 50px;
+	line-height: 50px;
+	padding: 0 10px;
+	color: white;
+
+	width: fit-content;
+}
+
+#title-1 {
+	background-color: #448aff;
+}
+
+#title-2 {
+	background-color: #ff5252;
+}
+
+#title-3 {
+	background-color: #69f0ae;
+}
+
+#page-arrow {
+	font-size: 70px;
+	border-radius: 50%;
+	animation: color-change 8s infinite, pulse 1s infinite;
+	cursor: pointer;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+#page-arrow:hover {
+	transition: 0.5s;
+	background-color: rgba(10, 10, 10, 0.05);
+}
+
+@keyframes line-change {
+	0%,
+	22%,
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+	25%,
+	47% {
+		transform: translate3d(0, -33.3%, 0);
+	}
+	50%,
+	72% {
+		transform: translate3d(0, -66.6%, 0);
+	}
+	75%,
+	97% {
+		transform: translate3d(0, -33.3%, 0);
+	}
+}
+
+@keyframes color-change {
+	0%,
+	22%,
+	100% {
+		color: #448aff;
+	}
+	25%,
+	47% {
+		color: #ff5252;
+	}
+	50%,
+	72% {
+		color: #69f0ae;
+	}
+	75%,
+	97% {
+		color: #ff5252;
+	}
+}
+
+@keyframes pulse {
+	0% {
+		transform: translate3d(0, -10%, 0);
+	}
+	50% {
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		transform: translate3d(0, -10%, 0);
+	}
+}

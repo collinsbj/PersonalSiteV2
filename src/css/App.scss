@@ -1,0 +1,26 @@
+@import "reset";
+
+body,
+* {
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+	color: rgba(0, 0, 0, 0.87);
+}
+
+.page {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+}
+
+.absolute-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@import "WelcomePage";
+@import "TechPage";
+@import "ProjectsPage";
+@import "SkillsPage";

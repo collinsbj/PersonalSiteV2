@@ -1,0 +1,70 @@
+.left-bar {
+	width: 20%;
+	height: 100%;
+	background-color: black;
+}
+
+.skill {
+	width: 500px;
+	height: 25vh;
+	position: absolute;
+	left: 20%;
+	transform: translateX(-50%);
+}
+
+.left-bar .skill:nth-child(1) {
+	top: 6.25vh;
+}
+
+.left-bar .skill:nth-child(2) {
+	top: 37.5vh;
+}
+
+.left-bar .skill:nth-child(3) {
+	top: 68.75vh;
+}
+
+.ball-blurry,
+.ball-sharp,
+.skill-title {
+	position: absolute;
+	top: 50%;
+}
+
+.ball-blurry,
+.ball-sharp {
+	background: linear-gradient(#ffff72, #ffeb3b);
+	height: 25vh;
+}
+
+.ball-blurry {
+	border-bottom-right-radius: 200px;
+	border-top-right-radius: 200px;
+	filter: blur(5px);
+	left: 51%;
+	transform: translateY(-50%);
+	width: 12.5vh;
+	z-index: 11;
+}
+
+.ball-sharp {
+	border-radius: 50%;
+	height: 25vh;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 25vh;
+	z-index: 10;
+}
+
+.skill-title {
+	color: rgb(128, 128, 128);
+	font-family: "ZCOOL QingKe HuangYou", sans-serif;
+	font-size: 50px;
+	left: 50%;
+	line-height: 60px;
+	min-width: 500px;
+	text-align: center;
+	text-shadow: 1px 13px 25px #3a3a3a;
+	transform: translate(-50%, -50%) rotate(15deg);
+	z-index: 12;
+}
